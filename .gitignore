@@ -1,0 +1,5 @@
+node_modules
+output
+venv
+.idea
+visual-test/screenshots/diff/

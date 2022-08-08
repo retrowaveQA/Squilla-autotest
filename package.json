@@ -1,0 +1,30 @@
+{
+  "name": "loans-e2e",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test-all": "codeceptjs run --debug",
+    "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+    "codeceptjs:ui": "codecept-ui --app",
+    "test-allure": "npx codeceptjs run --plugins allure",
+    "debug": "codeceptjs run --debug",
+    "test-squid": "codeceptjs run --grep @SquID",
+    "test-borrower": "codeceptjs run --grep @Borrower",
+    "test-ci": "codeceptjs run --grep @CI",
+    "test-visual": "codeceptjs run --config ./visual.conf.js"
+  },
+  "devDependencies": {
+    "@codeceptjs/configure": "^0.6.2",
+    "@codeceptjs/examples": "^1.2.1",
+    "@codeceptjs/ui": "^0.4.5",
+    "@wdio/selenium-standalone-service": "^7.14.1",
+    "codeceptjs": "^3.3.0",
+    "webdriverio": "^5.23.0"
+  },
+  "dependencies": {
+    "@testomatio/reporter": "^0.3.15",
+    "@wdio/cli": "^7.14.1",
+    "playwright": "^1.20.0",
+    "selenium": "^2.20.0"
+  }
+}
